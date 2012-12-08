@@ -66,4 +66,40 @@ public:
 			}
 		}
 	}
+
+	void test()
+	{
+		ListNode *l1=NULL, *l2=NULL, *cur;
+		int num1,num2,val;
+		
+		cin>>num1;
+		while(num1--)
+		{
+			cin>>val;
+			ListNode *nd=new ListNode(val);
+			if(!l1)
+				l1=cur=nd;
+			else
+				cur=cur->next=nd;
+		}
+		
+		cin>>num2;
+		while(num2--)
+		{
+			cin>>val;
+			ListNode *nd=new ListNode(val);
+			if(!l2)
+				l2=cur=nd;
+			else
+				cur=cur->next=nd;
+		}
+
+		ListNode *res=addTwoNumbers(l1,l2);
+
+		while(res)
+		{
+			cout<<res->val;
+			res=res->next;
+		}
+	}
 };
