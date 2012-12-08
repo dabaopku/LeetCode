@@ -1,0 +1,8 @@
+*.filters
+build
+*.suo
+*.sln
+*.vcxproj
+LeetCode
+*.o
+*.obj
